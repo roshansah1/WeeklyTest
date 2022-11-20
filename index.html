@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Test - 1</title>
+</head>
+
+<body>
+    <button>Click</button>
+    <p id="p1"> </p>
+
+</body>
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    button{
+        height: 40px;
+        width: 90px;
+        font-size: large;
+    }
+    p{
+        font-size: x-large;
+    }
+</style>
+<script>
+let pTag = document.getElementById('p1');
+let button = document.getElementsByTagName('button')[0];
+
+button.addEventListener('click', () => {
+    pTag.innerText = "This is Paragraph"
+})
+</script>
+
+</html>
