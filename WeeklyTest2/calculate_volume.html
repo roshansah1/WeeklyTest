@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume Calculator</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <p> Input radius value and get the volume of sphere. </p>
+        <p> Radius </p>
+        <input type="text">
+        <p> Volume </p>
+        <input type="text" value="0.0000">
+        <br>
+        <button>Calculate</button>
+    </div>
+</body>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .main-container {
+        border: 2px solid black;
+        height: 188px;
+        width: 350px;
+    }
+
+    input {
+        margin: 5px 10px;
+        height: 25px;
+    }
+
+    p,
+    button {
+        margin-left: 10px;
+        font-weight: bold;
+    }
+
+    button {
+        padding: 3px;
+    }
+
+    p:first-of-type {
+        margin-bottom: 25px;
+    }
+</style>
+
+<script>
+
+    let button = document.getElementsByTagName('button')[0];
+    
+    let input = document.getElementsByTagName('input')[0];
+    let text = document.getElementsByTagName('input')[1];
+  
+    
+
+    button.addEventListener('click', () => {
+         let radius = input.value;
+
+         let volume = (4/3)*3.141592653589793*radius**3;
+         volume = volume.toFixed(4);
+         text.value = volume;
+         console.log(volume)
+    })
+</script>
+
+</html>
