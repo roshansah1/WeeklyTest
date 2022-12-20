@@ -22,6 +22,7 @@ function getUniversities() {
     .then(res => res.json())
     .then((data) => {
       //console.log(data)
+      data = [...data]
       card.innerHTML = ""
       for(let i = 0; i < data.length; i++){
        
