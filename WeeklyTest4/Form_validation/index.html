@@ -10,7 +10,7 @@
 
 <body>
     <h1> CREATE YOUR ACCOUNT </h1>
-    <form action="#">
+    <form>
         <div class="name">
             <label>Name</label>
             <input type="text" id="name" placeholder="Enter your name">
@@ -116,8 +116,8 @@
         let InputPass = document.getElementById('password');
         let InputconfirmPass = document.getElementById('confirm_password');
 
-        button.addEventListener('click', () => {
-
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
             let name = InputName.value;
             let email = InputEmail.value;
             let pass = InputPass.value;
@@ -132,7 +132,7 @@
                 alert("password must be same")
                 return
             }
-            
+
             let table = document.getElementById('table');
             table.style.display = "block"
 
